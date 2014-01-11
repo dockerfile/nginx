@@ -20,4 +20,4 @@ This repository contains **Dockerfile** of [Nginx](http://nginx.org/) for [Docke
 
 ### Usage
 
-    docker run -p 80:80 dockerfile/nginx
+    docker run -i -p 80:80 -t dockerfile/nginx bash
