@@ -15,9 +15,9 @@ This repository contains **Dockerfile** of [Nginx](http://nginx.org/) for [Docke
 
 2. Download [trusted build](https://index.docker.io/u/dockerfile/nginx/) from public [Docker Registry](https://index.docker.io/): `docker pull dockerfile/nginx`
 
-   (alternatively, you can build an image from Dockerfile: `docker build -t="dockerfile/nginx" .`)
+   (alternatively, you can build an image from Dockerfile: `docker build -t="dockerfile/nginx" github.com/dockerfile/nginx`)
 
 
 ### Usage
 
-    docker run -i -p 80:80 -t dockerfile/nginx bash
+    docker run -d -p 80:80 -t dockerfile/nginx
