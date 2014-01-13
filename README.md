@@ -6,7 +6,7 @@ This repository contains **Dockerfile** of [Nginx](http://nginx.org/) for [Docke
 
 ### Dependencies
 
-* [dockerfile/ubuntu](https://github.com/dockerfile/ubuntu)
+* [dockerfile/ubuntu](http://dockerfile.github.io/#/ubuntu)
 
 
 ### Installation
