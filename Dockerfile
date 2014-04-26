@@ -17,7 +17,7 @@ RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
 VOLUME ["/data", "/etc/nginx/sites-enabled", "/var/log/nginx"]
 
 # Define working directory.
-WORKDIR "/etc/nginx"
+WORKDIR /etc/nginx
 
 # Define default command.
 ENTRYPOINT ["nginx"]
