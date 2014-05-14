@@ -12,7 +12,8 @@ RUN \
   add-apt-repository -y ppa:nginx/stable && \
   apt-get update && \
   apt-get install -y nginx && \
-  echo "\ndaemon off;" >> /etc/nginx/nginx.conf
+  echo "\ndaemon off;" >> /etc/nginx/nginx.conf && \
+  chown -R www-data:www-data /var/lib/nginx
 
 # Define mountable directories.
 VOLUME ["/data", "/etc/nginx/sites-enabled", "/var/log/nginx"]
