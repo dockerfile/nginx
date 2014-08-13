@@ -16,7 +16,7 @@ RUN \
   chown -R www-data:www-data /var/lib/nginx
 
 # Define mountable directories.
-VOLUME ["/data", "/etc/nginx/sites-enabled", "/var/log/nginx"]
+VOLUME ["/data", "/etc/nginx/sites-enabled", "/etc/nginx/conf.d", "/var/log/nginx"]
 
 # Define working directory.
 WORKDIR /etc/nginx
