@@ -27,3 +27,9 @@ This repository contains **Dockerfile** of [Nginx](http://nginx.org/) for [Docke
     docker run -d -p 80:80 -v <sites-enabled-dir>:/etc/nginx/conf.d -v <certs-dir>:/etc/nginx/certs -v <log-dir>:/var/log/nginx -v <html-dir>:/var/www/html dockerfile/nginx
 
 After few seconds, open `http://<host>` to see the welcome page.
+
+#### Logging
+
+Access and error logs are sent to the Docker log collector by default by linking them to stdout and stderr, which causes all messages from both logs to be stored in the file/var/lib/docker/containers/\<container id\>/\<container id\>-json.log on the Docker Host. To access the logs from the command line :
+
+    docker logs <container name>
