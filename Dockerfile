@@ -5,13 +5,21 @@
 #
 
 # Pull base image.
-FROM dockerfile/ubuntu
+FROM docker.br.hmheng.io/base-ubuntu:16.04
+
+RUN apt-get update
+RUN apt-get install -y software-properties-common
 
 # Install Nginx.
 RUN \
   add-apt-repository -y ppa:nginx/stable && \
   apt-get update && \
-  apt-get install -y nginx && \
+  apt-get install -y \
+  nginx \
+  python2.7 \
+  libcurl4-nss-dev \
+  libsvn-dev \
+  sudo && \
   rm -rf /var/lib/apt/lists/* && \
   echo "\ndaemon off;" >> /etc/nginx/nginx.conf && \
   chown -R www-data:www-data /var/lib/nginx
